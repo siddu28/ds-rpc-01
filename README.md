@@ -1,2 +1,12 @@
-# ds-rpc-01
-Starter repository for the RPC-01: Internal Chatbot with Role Based Access Control
+# DS RPC 01: Internal chatbot with role based access control
+
+This is a starter repository for Codebasics's Resume Project Challenge of building a RAG based Internal Chatbot with role based access control.
+
+Basic Authentication using FastAPI's `HTTPBasic` has been implemented in `main.py` for learners to get started with.
+
+### Roles Provided
+ - **engineering**
+ - **finance**
+ - **general**
+ - **hr**
+ - **marketing**
