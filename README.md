@@ -5,7 +5,7 @@ This is the starter repository for Codebasics's [Resume Project Challenge](https
 Basic Authentication using FastAPI's `HTTPBasic` has been implemented in `main.py` for learners to get started with.
 
 Visit the challenge page to learn more: [DS RPC-01](https://codebasics.io/challenge/codebasics-gen-ai-data-science-resume-project-challenge)
-
+![alt text](resources/RPC_01_Thumbnail.jpg)
 ### Roles Provided
  - **engineering**
  - **finance**

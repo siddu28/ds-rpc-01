@@ -43,4 +43,4 @@ def test(user=Depends(authenticate)):
 # Protected chat endpoint
 @app.post("/chat")
 def query(user=Depends(authenticate), message: str = "Hello"):
-    return "To be implemented"
+    return "Implement this endpoint."
