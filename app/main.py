@@ -2,6 +2,7 @@ from typing import Dict
 
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from app.services import initialize_components, generate_answer
 
 
 app = FastAPI()
@@ -14,7 +15,7 @@ users_db: Dict[str, Dict[str, str]] = {
     "Sam": {"password": "financepass", "role": "finance"},
     "Peter": {"password": "pete123", "role": "engineering"},
     "Sid": {"password": "sidpass123", "role": "marketing"},
-    "Natasha": {"passwoed": "hrpass123", "role": "hr"}
+    "Natasha": {"password": "hrpass123", "role": "hr"}
 }
 
 
@@ -43,4 +44,12 @@ def test(user=Depends(authenticate)):
 # Protected chat endpoint
 @app.post("/chat")
 def query(user=Depends(authenticate), message: str = "Hello"):
-    return "Implement this endpoint."
+    initialize_components()
+
+    role = user['role']
+
+    answer = generate_answer(message,role)
+
+    return {
+        "answer": answer
+    }
