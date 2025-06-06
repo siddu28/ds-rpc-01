@@ -67,9 +67,10 @@ def load_all_documents(base_path="resources/data"):
 
 def initialize_components():
     global llm,vector_store
+    api_key = os.getenv("GROQ_API_KEY")
 
     if llm is None:
-        llm=ChatGroq(model="llama-3.3-70b-versatile",temperature=0.9,max_tokens=500,api_key="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")
+        llm=ChatGroq(model="llama-3.3-70b-versatile",temperature=0.9,max_tokens=500,api_key=api_key)
 
     if vector_store is None:
         ef = HuggingFaceEmbeddings(
@@ -126,3 +127,4 @@ def generate_answer(query, user_role):
 #     print("Querying now...")
 #     answer = generate_answer(query, user_role)
 #     print("Answer:\n", answer)
+
