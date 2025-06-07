@@ -3,7 +3,6 @@
 # Problem Statement:
 This project is a role-based chatbot application built using FastAPI, Streamlit, and LangChain + Groq LLM. It restricts users to ask questions only within their role-based access level. For example, an HR user can only query HR-related documents, while Engineering can only access Engineering-related data.
 
-Visit the challenge page to learn more: [DS RPC-01](https://codebasics.io/challenge/codebasics-gen-ai-data-science-resume-project-challenge)
 ![alt text](resources/RPC_01_Thumbnail.jpg)
 ### Roles Provided
  - **engineering**
