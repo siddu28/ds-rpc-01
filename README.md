@@ -14,26 +14,29 @@ Visit the challenge page to learn more: [DS RPC-01](https://codebasics.io/challe
 
 # This is Project Structure:
 
+```
 project/
 │
 ├── app/
-│   └── services.py               ← Core LLM + VectorDB logic
+│ └── services.py ← Core LLM + VectorDB logic
 │
-├── main.py                      ← FastAPI API (login, chat endpoints)
-├── streamlit_app.py            ← Streamlit UI (frontend)
+├── main.py ← FastAPI API (login, chat endpoints)
+├── streamlit_app.py ← Streamlit UI (frontend)
 │
 ├── resources/
-│   └── data/                    ← Department-wise document sources
-│       ├── engineering/
-│       ├── hr/
-│       ├── finance/
-│       └── marketing/
+│ └── data/ ← Department-wise document sources
+│ ├── engineering/
+│ ├── hr/
+│ ├── finance/
+│ └── marketing/
 │
 └── resource/
-    └── vectorstore/            ← Vector database for Chroma
+└── vectorstore/ ← Vector database for Chroma
+```
 
 
 🚀 Project Flow Overview
+
 📁 1. Document Preparation and Processing
 All documents are stored in the resources/data folder, organized by department (e.g., hr, marketing, engineering).
 
