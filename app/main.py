@@ -1,10 +1,18 @@
+## loading all the necessary libraries
 from typing import Dict
+from pathlib import Path
+from dotenv import load_dotenv
 
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from app.services import initialize_components, generate_answer
+import os
+
+## loading the groqapi key 
+load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
 
 
+## initializing fastapi
 app = FastAPI()
 security = HTTPBasic()
 
@@ -44,9 +52,9 @@ def test(user=Depends(authenticate)):
 # Protected chat endpoint
 @app.post("/chat")
 def query(user=Depends(authenticate), message: str = "Hello"):
-    initialize_components()
+    initialize_components()  ## it initializes llm,vector_store,vector_embeddings
 
-    role = user['role']
+    role = user['role']  ## getting the user to role inorder to restrict their questions up to their level.
 
     answer = generate_answer(message,role)
 
