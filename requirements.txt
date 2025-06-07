@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+streamlit
+python-dotenv
+langchain
+langchain-groq
+langchain-chroma
+huggingface-hub
+pandas
