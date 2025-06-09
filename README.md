@@ -11,7 +11,7 @@ This project is a role-based chatbot application built using FastAPI, Streamlit,
  - **hr**
  - **marketing**
 
-# This is Project Structure:
+# Project Structure:
 
 ```
 project/
